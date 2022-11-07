@@ -17,5 +17,10 @@ public class Order {
         this.clientAddress = clientAddress;
         this.orderId = orderId;
     }
+    public Order(String balloonColor, String clientName, String clientAddress){
+        this.balloonColor = balloonColor;
+        this.clientAddress = clientName;
+        this.clientAddress = clientAddress;
+    }
 
 }
