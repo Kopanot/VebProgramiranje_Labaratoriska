@@ -8,8 +8,11 @@ public class Balloon {
     private String name;
     private String description;
 
+    private int type;
+
     public Balloon(String name, String description) {
         this.name = name;
         this.description = description;
+        //this.type = type;
     }
 }

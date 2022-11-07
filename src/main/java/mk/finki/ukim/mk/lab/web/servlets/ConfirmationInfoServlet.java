@@ -1,5 +1,7 @@
 package mk.finki.ukim.mk.lab.web.servlets;
 
+import mk.finki.ukim.mk.lab.bootstrap.DataHolder;
+import mk.finki.ukim.mk.lab.model.Balloon;
 import org.thymeleaf.context.WebContext;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 
@@ -24,7 +26,9 @@ public class ConfirmationInfoServlet extends HttpServlet {
 
         req.getSession().setAttribute("ipAddress",req.getRemoteAddr());
         req.getSession().setAttribute("clientAgent",req.getHeader("user-Agent"));
-
+        String color = (String) req.getSession().getAttribute("color");
+        String size = (String) req.getSession().getAttribute("size");
+        DataHolder.balloonList.add(new Balloon(color,size));
         this.springTemplateEngine.process("confirmationInfo.html",context,resp.getWriter());
 
     }

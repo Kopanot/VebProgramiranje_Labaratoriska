@@ -30,7 +30,14 @@ public class SelectBalloonServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String size = req.getParameter("size");
         req.getSession().setAttribute("size",size);
-        resp.sendRedirect("/BalloonOrder.do");
+        if (req.getSession().getAttribute("color") == null){
+            resp.sendRedirect("/home");
+        }else {
+            resp.sendRedirect("/BalloonOrder.do");
+        }
+
+
+
     }
 
 }
