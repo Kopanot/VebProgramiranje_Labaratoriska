@@ -33,4 +33,4 @@ public class BalloonRepository {
 
 }
 //sort by name,da nema baloni so isto ime
-//dodadi svojstvo type vo Balloon,type e numeracija i da se filtrira spored type na pochetnata strana
+//dodadi svojstvo type vo Balloon,type e enum i da se filtrira spored type na pochetnata strana

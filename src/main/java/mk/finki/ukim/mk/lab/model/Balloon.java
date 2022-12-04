@@ -5,14 +5,16 @@ import lombok.Data;
 @Data
 public class Balloon {
 
+
+    private  Long id;
     private String name;
     private String description;
+    private Manufacturer manufacturer;
 
-    private int type;
 
     public Balloon(String name, String description) {
+        this.id = (long) (Math.random()*1000);
         this.name = name;
         this.description = description;
-        //this.type = type;
     }
 }
